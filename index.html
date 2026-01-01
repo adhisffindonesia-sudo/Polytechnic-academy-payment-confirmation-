@@ -1,15 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Open Telegram</title>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Successful</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f5f5f5;
+    }
+    h2 {
+      color: green;
+    }
+    button {
+      padding: 15px 25px;
+      font-size: 18px;
+      margin-top: 20px;
+      cursor: pointer;
+      border: none;
+      background-color: #0088cc;
+      color: white;
+      border-radius: 5px;
+    }
+  </style>
 </head>
-<body style="display:flex; justify-content:center; align-items:center; height:100vh;">
+<body>
 
-    <a href="https://t.me/arifbhai4" 
-       style="font-size:24px; text-decoration:none; padding:15px 25px; background:#0088cc; color:white; border-radius:8px;">
-        Open Telegram
-    </a>
+  <h2>Payment Successful ✅</h2>
+  <p>Redirecting to your Telegram channel…</p>
+
+  <button id="joinBtn" style="display:none;">Join Telegram Channel</button>
+
+  <script>
+    // Try auto-redirect to Telegram app
+    window.location.href = "t.me/+iUqancDvlOBkNjg1";
+
+    // Fallback: show button after 2 seconds
+    setTimeout(function() {
+      document.getElementById("joinBtn").style.display = "inline-block";
+      document.getElementById("joinBtn").onclick = function() {
+        window.location.href = "https://t.me/+YOUR_INVITE_LINK";
+      };
+    }, 2000);
+  </script>
 
 </body>
 </html>
